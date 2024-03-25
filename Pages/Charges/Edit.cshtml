@@ -1,0 +1,113 @@
+﻿@page
+@model PaymentsCharges.Pages.Charges.EditModel
+@{
+}
+
+<br>
+<h2>Edit Charge</h2>
+
+    @if (Model.errorMessage.Length > 0)
+    {
+    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+        <strong>@Model.errorMessage</strong>
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+    </div>
+    }
+
+<form method="POST">
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">Number</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Number" value="@Model.Charge.ApartmentNumber">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">January</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="January" value="@Model.Charge.January">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">February</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="February" value="@Model.Charge.February">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">March</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="March" value="@Model.Charge.March">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">April</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="April" value="@Model.Charge.April">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">May</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="May" value="@Model.Charge.May">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">June</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="June" value="@Model.Charge.June">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">July</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="July" value="@Model.Charge.July">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">August</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="August" value="@Model.Charge.August">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">September</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="September" value="@Model.Charge.September">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">October</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="October" value="@Model.Charge.October">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">November</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="November" value="@Model.Charge.November">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="col-sm-1  col-form-label">December</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="December" value="@Model.Charge.December">
+        </div>
+    </div>
+
+        @if (Model.successMessage.Length > 0)
+        {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>@Model.successMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        }
+
+    <div class="row mb-1">
+        <div class="offset-sm-1 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+</form>

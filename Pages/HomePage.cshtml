@@ -1,0 +1,99 @@
+﻿@page
+@model PaymentsCharges.Pages.HomePageModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br>
+<h2>List of Charges</h2>
+<a class='btn btn-primary btn-sm' href='/Charges/Create'>New Charges</a>
+<table class="table">
+    <thread>
+        <tr>
+            <th>Number</th>
+            <th>January</th>
+            <th>February</th>
+            <th>March</th>
+            <th>April</th>
+            <th>May</th>
+            <th>June</th>
+            <th>July</th>
+            <th>August</th>
+            <th>September</th>
+            <th>October</th>
+            <th>November</th>
+            <th>December</th>
+            <th>Action</th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var item in Model.chargesList)
+        {
+            <tr>
+                <td align="center">@item.ApartmentNumber</td>
+                <td align="center">@item.January</td>
+                <td align="center">@item.February</td>
+                <td align="center">@item.March</td>
+                <td align="center">@item.April</td>
+                <td align="center">@item.May</td>
+                <td align="center">@item.June</td>
+                <td align="center">@item.July</td>
+                <td align="center">@item.August</td>
+                <td align="center">@item.September</td>
+                <td align="center">@item.October</td>
+                <td align="center">@item.November</td>
+                <td align="center">@item.December</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Charges/Edit?apartment=@item.ApartmentNumber">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Charges/Delete?apartment=@item.ApartmentNumber">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+    <h2>List of Payments</h2>
+    <a class='btn btn-primary btn-sm' href='/Payments/Create'>New Payment</a>
+    <table class="table">
+        <thread>
+            <tr>
+                <th>Number</th>
+                <th>January</th>
+                <th>February</th>
+                <th>March</th>
+                <th>April</th>
+                <th>May</th>
+                <th>June</th>
+                <th>July</th>
+                <th>August</th>
+                <th>September</th>
+                <th>October</th>
+                <th>November</th>
+                <th>December</th>
+                <th>Action</th>
+            </tr>
+        </thread>
+        <tbody>
+            @foreach (var item in Model.PaymentsList)
+            {
+                <tr>
+                    <td align="center">@item.ApartmentNumber</td>
+                    <td align="center">@item.January</td>
+                    <td align="center">@item.February</td>
+                    <td align="center">@item.March</td>
+                    <td align="center">@item.April</td>
+                    <td align="center">@item.May</td>
+                    <td align="center">@item.June</td>
+                    <td align="center">@item.July</td>
+                    <td align="center">@item.August</td>
+                    <td align="center">@item.September</td>
+                    <td align="center">@item.October</td>
+                    <td align="center">@item.November</td>
+                    <td align="center">@item.December</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/Payments/Edit?apartment1=@item.ApartmentNumber">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Payments/Delete?apartment1=@item.ApartmentNumber">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        </table>
